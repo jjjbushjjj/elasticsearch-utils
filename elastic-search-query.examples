@@ -1,0 +1,19 @@
+{
+    "size": 0,
+    "fields": [
+        "@timestamp",
+        "message"
+    ],
+    "query": {
+        "constant_score": {
+            "filter": {
+                "range": {
+                    "@timestamp": {
+                        "from": "2015-07-08",
+                        "to": "now"
+                    }
+                }
+            }
+        }
+    }
+}
